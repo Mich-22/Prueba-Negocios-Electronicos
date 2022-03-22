@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-    <title>Prezzie an Ecommerce Online Shopping Category Bootstrap Responsive Website Template | Contact :: w3layouts</title>
+    <title>Azul Society</title>
     <!-- custom-theme -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -27,12 +27,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
     <!-- banner -->
+
     <div class="banner_top" id="home">
         <div data-vide-bg="video/gift-packs">
             <div class="center-container inner-container">
                 <div class="w3_agile_header">
                     <div class="w3_agileits_logo">
-                        <h1><a href="index.html">prezzie<span>Life is a gift</span></a></h1>
+                        <h1><a href="index.html">AZ<span>Azul Society</span></a></h1>
                     </div>
                     <div class="w3_menu">
                         <div class="agileits_w3layouts_banner_info">
@@ -57,13 +58,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         <li><a href="gallery.html">Gallery</a></li>
                                         <li><a href="buynow.html">Buy</a></li>
                                         <li>
-                                            <a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a>
+                                            <a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Examples <span class="caret"></span></a>
                                             <ul class="dropdown-menu">
-                                                <li><a class="hvr-bounce-to-bottom" href="icons.html">Web Icons</a></li>
-                                                <li><a class="hvr-bounce-to-bottom" href="codes.html">Short Codes</a></li>
+                                                <li><a class="hvr-bounce-to-bottom" href="EnviarCorreoBoda.html">Wedding</a></li>
+                                                <li><a class="hvr-bounce-to-bottom" href="EnviarCorreoCumpleanios.html">Birthday</a></li>
+                                                <li><a class="hvr-bounce-to-bottom" href="EnviarCorreoBautizo.html">Baptism</a></li>
+                                                <li><a class="hvr-bounce-to-bottom" href="EnviarCorreoXV.html">XV Birthday</a></li>
+                                                <li><a class="hvr-bounce-to-bottom" href="EnviarCorreoMadres.html">Mother's day</a></li>
+                                                <li><a class="hvr-bounce-to-bottom" href="EnviarCorreoValentin.html">Valantine's day</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="contact.html" class="active">Contact</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
                                         <li class="nav-cart-w3ls">
                                             <form action="#" method="post" class="last">
                                                 <input type="hidden" name="cmd" value="_cart">
@@ -90,10 +95,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!--contact-->
     <div class="contact-top-agileinfo">
         <div class="container">
-            <h3 class="title-w3layouts contact-head">Envia la invitacion a tu correo para que puedas revisarlo y validar que esta a tu gusto <i class="fa fa-envelope" aria-hidden="true"></i></h3>
+            <h1>Boda</h1>
+            <h3 class="title-w3layouts contact-head">Envia la invitacion de la boda a tu correo para que puedas revisarlo y validar que esta a tu gusto <i class="fa fa-envelope" aria-hidden="true"></i></h3>
             <!--Seccion para Enviar correo-->
             <div class="col-md-6 contact-left-wthree">
-                <form action="enviar_email.php" method="post">
+                <form action="EnviarCorreoBodaSendGrid.php" method="post">
                     <label>Nombre de los novios</label><br />
                     <input type="text" name="esposos" value="" placeholder="Diana y Jose" style="width:750px;" />
                     <br /><br />
@@ -121,10 +127,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                               placeholder="Se llevara a cabo en el salón Quinta Santa Fé"></textarea>
                     <br /><br /><br />
 
+                    <label>Ingrese correo electronico</label><br />
+                    <textarea name="email" value="" rows="5" style="width:750px;"
+                              placeholder="michelle.lopezsilva@hotmail.com"></textarea>
+                    <br /><br /><br />
+
+                    <label>Nombre invitado</label><br />
+                    <textarea name="nombreInvitado" value="" rows="5" style="width:750px;"
+                              placeholder="Patricia Meneses Sanchez"></textarea>
+                    <br /><br /><br />
+
                     <button type="submit" class="btn btn-danger">Enviar invitacion</button>
                 </form>
             </div>
-            
+
         </div>
     </div>
     <!-- //contact -->
