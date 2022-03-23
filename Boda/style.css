@@ -1,0 +1,98 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    place-items: center;
+    background-color: rgba(0, 0, 0, 1);
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 1); 
+    margin-top: 50px;
+}
+
+.cont-temporizador{
+    display: flex;
+    justify-content: center;   
+    margin-top: 50px; 
+}                                                       /*FORMATO TOTAL*/
+.cont-temporizador .bloque{
+    margin: 0px 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+}                                                           /*bloque formato de numero dentro de bloque*/
+.cont-temporizador .bloque div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    box-shadow: 0px 0px 6px 3px #000000 inset;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    width: 100px;
+    height:100px;
+    margin-bottom: 10px;
+    border-radius: 100%;
+    opacity: 1;
+}
+
+h1{
+    text-align: center;
+    color: #000000;
+    font-size: 20px;
+    padding: 10px 10px;
+    font-weight: bold
+}
+                                                /*Formato de palabras minutos, horas etc*/
+.cont-temporizador .bloque p{
+    font-size: 17px;
+    font-weight: bold;
+    color: #000000;
+}
+.final-sms h2{
+    text-align: center;
+    font-size: 100px;
+    color: #000000;
+}
+                        /* no se usa*/
+.formato p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(80, 80, 80, 1);
+    box-shadow: 0px 0px 6px 2px #000000 inset;
+    font-size: 40px;
+    font-weight: bold;
+    width: 100px;
+    height: 70px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    opacity: 1;
+    color: #000000;
+}   
+.Horas .Dias .Minutos .Segundos{
+    border-color: blue;
+        width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, .8); 
+    margin-top: 50px;
+}
+                                                        /*cambia letras */
+.f{
+    opacity: 1;
+    color: black ;
+}
