@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form-registros{
+    width: 400px;
+    background:rgb(3, 16, 41);
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+     font-family: Arial;
+     color:  white;
+
+}
+.form-registros h4{
+    font-size:  20px;
+    margin-bottom: 20px;
+}
+
+.controles{
+    width: 100%;
+    background:rgb(243, 243, 243);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid white;
+    font-family: Arial;
+    font-size: 18px;
+}
+
+.form-registros p{
+    height: 23px;
+    font-size: 18px;
+}
+
+.form-registros a{
+    color: white;
+    text-decoration: none;
+}
+
+.form-registros .boton{
+ width: 100%;
+ background: red;
+ border: none;
+ padding: 12px;
+color: rgb(243, 243, 243);
+margin: 16px 0;
+font-size: 16px;
+cursor: pointer;
+}
+.form-registros .boton:hover{
+    background-color: darkblue;
+   
+}
+
+.color
+{
+    width: 100%;
+    font-size: 12px;
+}
+body{
+    background: rgb(0, 183, 255);
+    background-size: cover;
+}
+.form-registros .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    left: calc(50% - 50px);
+  }
