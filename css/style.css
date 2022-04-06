@@ -650,7 +650,7 @@ p.para-w3agileits{
 	line-height:30px;
 }
 .white-agileits{
-	color:#fff!important;
+	color:#000!important;
 }
 .agileits_works-top {
     position: relative;
@@ -1736,27 +1736,27 @@ ul.about-agile li i {
 	position:relative;
 }
 .contact-right-w3l ::-webkit-input-placeholder {
-   color: #fff;
+   color: #000;
 }
 .contact-right-w3l:-moz-placeholder { /* Firefox 18- */
-   color: #fff;
+   color: #000;
 } 
 .contact-right-w3l ::-moz-placeholder {  /* Firefox 19+ */
-    color: #fff;  
+    color: #000;  
 } 
 .contact-main :-ms-input-placeholder {  
-    color: #fff;
+    color: #000;
 }	
 .contact-right-w3l input[type="text"], .contact-right-w3l input[type="email"] {
     font-size: 1em;
     border: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #000;
     background: transparent;
     outline: none;
     padding: 0.7em;
     width: 48.75%;
     margin-bottom: 1em;
-    color: #fff;
+    color: #000;
 }
 .contact-right-w3l input[type="text"]:nth-child(1),.contact-right-w3l input[type="email"] {
     margin-right:2%;
@@ -1768,10 +1768,10 @@ ul.about-agile li i {
 	resize:none;
 	height:100px;
 	border: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #000;
 	font-size:1em;
 	background: transparent;
-	color:#fff;
+	color:#000;
 }
 .contact-right-w3l input[type="submit"] {
     background: #fff;
@@ -1785,14 +1785,14 @@ ul.about-agile li i {
     letter-spacing: 2px;
     padding: 11px 30px;
 }
-.contact-right-w3l input[type="submit"]:hover {
-    background: #ff0000;
-    color: #fff;
-    border-color:#ff0000;
-}
+	.contact-right-w3l input[type="submit"]:hover {
+		background: #d18ff9;
+		color: #fff;
+		border-color: #d18ff9;
+	}
 .contact-right-w3l {
     padding: 4em 6em;
-    background: url(../images/contact.jpg) no-repeat center;
+    background: url(../images/LILA.jpg) no-repeat center;
     background-size: cover;
     background-attachment: fixed;
 }
