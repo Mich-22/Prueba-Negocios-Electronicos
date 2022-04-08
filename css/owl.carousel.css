@@ -49,9 +49,9 @@
 	zoom: 1;
 	padding:0.1em 0;
 }
-.owl-carousel2 div.owl-controls .owl-page.active span, .owl-carousel2 div.owl-controls.clickable .owl-page:hover span{
-	background:#2ec06c;
-}
+	.owl-carousel2 div.owl-controls .owl-page.active span, .owl-carousel2 div.owl-controls.clickable .owl-page:hover span {
+		background: #6e00ff;
+	}
 .owl-carousel1 .owl-controls .owl-page span{
 	background:#404040;
 }
@@ -72,8 +72,8 @@
 	background:#E38B44;
 }
 .owl-theme .owl-controls .owl-page.active span,
-.owl-theme .owl-controls.clickable .owl-page:hover span{
-	background:#ff0000;
+.owl-theme .owl-controls.clickable .owl-page:hover span {
+	background: #6e00ff;
 }
 
 /* If PaginationNumbers is true */
