@@ -23,6 +23,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href="//fonts.googleapis.com/css?family=Tangerine:400,700" rel="stylesheet">
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
 	<!-- banner -->
@@ -97,10 +98,83 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 	</div>
+	<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: red;
+}
+
+</style>
 	<!-- //banner -->
 	<!--Buy-now -->
 	<div class="buy-now">
 		<div class="container">
+			<h3>Filters</h3><br>
+			<div style="background: red; width: 100%;">
+				<div style=" width: 10%; float: left; ">
+					<input type="text" id="fname" name="firstname" placeholder="From price">
+				</div>
+
+				<div style=" width: 10%; float: left; margin-left: 5px;">
+					<input type="text" id="fname" name="firstname" placeholder="To price">
+				</div>
+
+				<div style=" width: 18%; float: left; margin-left: 5px;">
+					<select  name="option" style="background: white;">
+					  <option value="" disabled selected>Choose your category</option>
+					  <option value="1">Wedding</option>
+					  <option value="2">Birthday</option>
+					  <option value="3">Baptism</option>
+					</select> 
+				</div>
+
+				<div style=" width: 18%; float: left; margin-left: 5px;">
+					<select  name="option" style="background: white;">
+					  <option value="" disabled selected>Shipping cost</option>
+					  <option value="1">Free</option>
+					  <option value="2">Cost</option>
+					</select> 
+				</div>
+
+				<div style=" width: 15%; float: left; margin-left: 5px;">
+					<input type="text" id="fname" name="firstname" placeholder="How many units">
+				</div>
+
+				<div style=" width: 10%; float: left; margin-left: 5px;">
+					<select  name="option" style="background: white;">
+					  <option value="" disabled selected>Discounts</option>
+					  <option value="1">20%</option>
+					  <option value="2">50%</option>
+					  <option value="2">70%</option>
+					  <option value="2">80%</option>
+					</select> 
+				</div>
+
+				<div style=" width: 10%; float: left; margin-left: 10px;">
+					<input type="submit" value="Filter search">
+				</div>
+
+			</div>
 			<div class="heading-setion-w3ls">
 				<h3 class="title-w3layouts">Select Your Favourite Invitation</h3>
 			</div>
