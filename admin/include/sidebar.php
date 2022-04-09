@@ -63,12 +63,12 @@ $num1 = mysqli_num_rows($rt);
 							</li>
 						</ul>
 
-
 						<ul class="widget widget-menu unstyled">
                                 <li><a href="category.php"><i class="menu-icon icon-tasks"></i> Crear Categoria </a></li>
                                 <li><a href="subcategory.php"><i class="menu-icon icon-tasks"></i>Sub Categoria </a></li>
                                 <li><a href="insert-product.php"><i class="menu-icon icon-paste"></i>Insertar Producto </a></li>
                                 <li><a href="manage-products.php"><i class="menu-icon icon-table"></i>Administrar Productos </a></li>
+								<li><a href="charts.php"><i class="menu-icon icon-bar-chart"></i>Charts </a></li>
                         
                             </ul><!--/.widget-nav-->
 
