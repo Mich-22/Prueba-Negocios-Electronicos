@@ -148,10 +148,10 @@ if(isset($_GET['del']))
         data.addColumn('string', 'Topping');
         data.addColumn('number', 'Slices');
         data.addRows([
-          ['Birthday', 3],
-          ['XV Birthday', 1],
-          ['Baptism', 1],
-          ['Wedding', 1],
+          ['Birthday', 4],
+          ['XV Birthday', 2],
+          ['Baptism', 3],
+          ['Wedding', 5],
           ['Mothers day', 2]
         ]);
 
@@ -174,11 +174,11 @@ if(isset($_GET['del']))
         data2.addColumn('string', 'Topping');
         data2.addColumn('number', 'Slices');
         data2.addRows([
-          ['Wedding', 3],
-          ['Birthday', 1],
-          ['Valentines day', 1],
-          ['XV Birthday', 1],
-          ['Baptism', 2]
+          ['Wedding', 2],
+          ['Birthday', 3],
+          ['Valentines day', 4],
+          ['XV Birthday', 6],
+          ['Baptism', 6]
         ]);
 
         // Set chart options
@@ -220,8 +220,8 @@ if(isset($_GET['del']))
         data4.addColumn('string', 'Topping');
         data4.addColumn('number', 'Slices');
         data4.addRows([
-          ['CDMX', 3],
-          ['Monterrey', 1],
+          ['CDMX', 4],
+          ['Monterrey', 5],
           ['Guadalaja', 1],
           ['Tijuana', 1],
           ['Michoacan', 2]
