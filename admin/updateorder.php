@@ -23,7 +23,7 @@ echo "<script>alert('Order updated sucessfully...');</script>";
 function f2()
 {
 window.close();
-}ser
+}
 function f3()
 {
 window.print(); 
@@ -114,8 +114,7 @@ $st='Delivered';
     </tr>
     <tr>
       <td class="fontkink">       </td>
-      <td  class="fontkink"> <input type="submit" name="submit2"  value="Actualizar"   size="40" style="cursor: pointer;" /> &nbsp;&nbsp;   
-      <input name="Submit2" type="submit" class="txtbox4" value="Cerrar Ventana " onClick="return f2();" style="cursor: pointer;"  /></td>
+      <td  class="fontkink"> <input type="submit" name="submit2"  value="Actualizar"   size="40" style="cursor: pointer;" />
     </tr>
 <?php } ?>
 </table>

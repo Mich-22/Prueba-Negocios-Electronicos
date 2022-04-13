@@ -97,7 +97,7 @@ while($row=mysqli_fetch_array($query))
 											<td><?php echo htmlentities($row['quantity']);?></td>
 											<td><?php echo htmlentities($row['quantity']*$row['productprice']+$row['shippingcharge']);?></td>
 											<td><?php echo htmlentities($row['orderdate']);?></td>
-											<td>   <a href="updateorder.php?oid=<?php echo htmlentities($row['id']);?>" title="Update order" target="_blank"><i class="icon-edit"></i></a>
+											<td>   <a onclick="cargarDatos('updateorder.php?oid=<?php echo htmlentities($row['id']);?>')" title="Update order" target="_blank"><i class="icon-edit"></i></a>
 											</td>
 											</tr>
 
@@ -106,7 +106,6 @@ while($row=mysqli_fetch_array($query))
 								</table>
 							</div>
 						</div>						
-
 						
 						
 					</div><!--/.content-->
@@ -114,6 +113,26 @@ while($row=mysqli_fetch_array($query))
 			</div>
 		</div><!--/.container-->
 	</div><!--/.wrapper-->
+
+
+
+
+	
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Orden</h3>
+  </div>
+  <div class="modal-body" id="miModalDatos">
+    <p>One fine body…</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Cerrar</button>
+  </div>
+</div>
+
+
 
 <?php include('include/footer.php');?>
 
@@ -130,6 +149,11 @@ while($row=mysqli_fetch_array($query))
 			$('.dataTables_paginate > a:first-child').append('<i class="icon-chevron-left shaded"></i>');
 			$('.dataTables_paginate > a:last-child').append('<i class="icon-chevron-right shaded"></i>');
 		} );
+
+		function cargarDatos(url){
+			$('#miModalDatos').load(url);
+			$('#myModal').modal();
+		}
 	</script>
 </body>
 <?php } ?>
