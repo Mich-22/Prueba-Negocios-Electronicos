@@ -51,11 +51,12 @@ if(isset($_GET['del']))
 
                         <div class="row">
                             <div class="span5">
-                        
+
                                 <div class="module">
                                     <div class="module-head">
                                         <h3>
-                                            Chart</h3>
+                                            Mas visitados a menos visitados
+                                        </h3>
                                     </div>
                                     <div class="module-body">
                                         <div class="chart pie donut interactive">
@@ -67,11 +68,12 @@ if(isset($_GET['del']))
                             </div>
 
                             <div class="span5">
-                        
+
                                 <div class="module">
                                     <div class="module-head">
                                         <h3>
-                                            Chart</h3>
+                                            Mas vendidos a menos vendidos
+                                        </h3>
                                     </div>
                                     <div class="module-body">
                                         <div class="chart pie donut interactive">
@@ -83,11 +85,13 @@ if(isset($_GET['del']))
                             </div>
 
                             <div class="span5">
-                        
+
                                 <div class="module">
                                     <div class="module-head">
                                         <h3>
-                                            Chart</h3>
+
+                                            Mas buscados a menos buscados
+                                        </h3>
                                     </div>
                                     <div class="module-body">
                                         <div class="chart pie donut interactive">
@@ -99,15 +103,34 @@ if(isset($_GET['del']))
                             </div>
 
                             <div class="span5">
-                        
+
                                 <div class="module">
                                     <div class="module-head">
                                         <h3>
-                                            Chart</h3>
+                                            Ventas por region
+                                        </h3>
                                     </div>
                                     <div class="module-body">
                                         <div class="chart pie donut interactive">
-                                            <div id="google4">
+                                            <div id="regions_div">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="span5">
+
+                                <div class="module">
+                                    <div class="module-head">
+                                        <h3>
+                                            Cantidad de visitantes
+                                        </h3>
+                                    </div>
+                                    <div class="module-body">
+                                        <div class="chart pie donut interactive">
+                                            <div id="google5">
                                             </div>
                                         </div>
                                     </div>
@@ -142,33 +165,6 @@ if(isset($_GET['del']))
       // instantiates the pie chart, passes in the data and
       // draws it.
       function drawChart() {
-
-        // Create the data table.
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
-        data.addRows([
-          ['Birthday', 4],
-          ['XV Birthday', 2],
-          ['Baptism', 3],
-          ['Wedding', 5],
-          ['Mothers day', 2]
-        ]);
-
-        // Set chart options
-        var options = {'title':'From top sellers to bottom sellers',
-                       'width':400,
-                       'height':300};
-
-        // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.PieChart(document.getElementById('google1'));
-        chart.draw(data, options);
-
-
-
-
-
-        
         // Create the data table.
         var data2 = new google.visualization.DataTable();
         data2.addColumn('string', 'Topping');
@@ -182,7 +178,7 @@ if(isset($_GET['del']))
         ]);
 
         // Set chart options
-        var options2 = {'title':'Most wanted',
+        var options2 = {'title':'',
                        'width':400,
                        'height':300};
 
@@ -194,48 +190,141 @@ if(isset($_GET['del']))
         
         
         
-        // Create the data table.
-        var data3 = new google.visualization.DataTable();
-        data3.addColumn('string', 'Topping');
-        data3.addColumn('number', 'Slices');
-        data3.addRows([
-          ['Birthday', 3],
-          ['XV Birthday', 1],
-          ['Baptism', 1],
-          ['Wedding', 1],
-          ['Mothers day', 2]
-        ]);
+        // Create the data table 3.
 
-        // Set chart options
-        var options3 = {'title':'Purchase quantity',
-                       'width':400,
-                       'height':300};
+        var data = google.visualization.arrayToDataTable([
+        ["Element", "Porcentaje", {role: "style" } ],
+        ["Birthday", 28.94, "#b87333"],
+        ["XV Birthday", 21.45, "color: #e5e4e2"],
+        ["Wedding", 19.49, "silver"],
+        ["Valentines Day", 9.30, "gold"],
+        ["Baptism", 3.30, "green"],
+        
+        
+      ]);
 
-        // Instantiate and draw our chart, passing in some options.
-        var chart3 = new google.visualization.PieChart(document.getElementById('google3'));
-        chart3.draw(data3, options3);
+      var viewBar = new google.visualization.DataView(data);
+      viewBar.setColumns([0, 1,
+                       {calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
 
-         // Create the data table.
-        var data4 = new google.visualization.DataTable();
-        data4.addColumn('string', 'Topping');
-        data4.addColumn('number', 'Slices');
-        data4.addRows([
-          ['CDMX', 4],
-          ['Monterrey', 5],
-          ['Guadalaja', 1],
-          ['Tijuana', 1],
-          ['Michoacan', 2]
-        ]);
+      var optionsBar = {
+                  title: "",
+        width: 400,
+        height: 300,
+        bar: {groupWidth: "95%"},
+        legend: {position: "none" },
+      };
+          var chartBar = new google.visualization.BarChart(document.getElementById("google3"));
+      chartBar.draw(viewBar, optionsBar);
 
-        // Set chart options
-        var options4 = {'title':'Number of visitors',
-                       'width':400,
-                       'height':300};
 
-        // Instantiate and draw our chart, passing in some options.
-        var chart4 = new google.visualization.PieChart(document.getElementById('google4'));
-        chart4.draw(data4, options4);
-      }
+
+
+
+
+
+
+          //  Aqui nueva gráfica del mapa del mundo
+          google.charts.load('current', {
+              'packages': ['geochart'],
+          });
+          google.charts.setOnLoadCallback(drawRegionsMap);
+
+          google.charts.setOnLoadCallback(drawChart2);
+          google.charts.setOnLoadCallback(drawChartDos);
+          
+
+
+            }
+
+          function drawRegionsMap() {
+              var data = google.visualization.arrayToDataTable([
+                  ['Country', 'Popularity'],
+                  ['Germany', 200],
+                  ['United States', 300],
+                  ['Brazil', 400],
+                  ['Canada', 500],
+                  ['France', 600],
+                  ['RU', 700]
+              ]);
+
+              var options = {
+                  width: 400,
+                  height: 300,};
+
+              var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+              chart.draw(data, options);
+        }
+
+        function drawChart2() {
+            var data1 = google.visualization.arrayToDataTable([
+                ['Dinosaur', 'Porcentaje'],
+                ['MothersDay (Poncentaje)', 12.2],
+                ['XV Birthday (Poncentaje)', 9.1],
+                ['MothersDay (Poncentaje)', 12.2],
+                ['Wedding (Poncentaje)', 22.9],
+                ['XV Birthday (Poncentaje)', 0.9],
+                ['Birthday (Porcentaje)', 36.6],
+                ['XV Birthday (Poncentaje )', 9.1],
+                ['Birthday (Poncentaje)', 30.5],
+                ['XV Birthday (Poncentaje)', 6.1],
+                ['XV Birthday (Poncentaje)', 2.7],
+                ['XV Birthday (Poncentaje)', 0.9],
+                ['XV Birthday (Poncentaje)', 2.7],
+                ['Wedding (Poncentaje)', 27.1],
+                ['XV Birthday (Poncentaje)', 3.4],
+                ['XV Birthday (Poncentaje)', 5.5],
+                ['Wedding (Poncentaje)', 21.0],
+                ['XV Birthday (Poncentaje)', 7.9],
+                ['XV Birthday (Poncentaje)', 1.2],
+                ['XV Birthday (Poncentaje)', 4.6],
+                ['XV Birthday (Poncentaje)', 1.5],
+                ['XV Birthday (Poncentaje)', 7.9],
+                ['XV Birthday (Poncentaje)', 2.0],
+                ['Valentins Day (Poncentaje)', 45.7],
+                ['MothersDay (Poncentaje)', 12.2],
+                ['Birthday (Poncentaje)', 30.5],
+                ['MothersDay (Poncentaje)', 15.2],
+                ['Birthday (Poncentaje)', 30.5],
+                ['XV Birthday (Poncentaje)', 1.8]]);
+
+            var optionss = {
+                title: '',
+                width: 400,
+                height: 300,
+                legend: { position: 'none' },
+            };
+
+            var chartt = new google.visualization.Histogram(document.getElementById('google1'));
+            chartt.draw(data1, optionss);
+        }
+
+
+        function drawChartDos() {
+            var dataDos = google.visualization.arrayToDataTable([
+                ['Anio', 'Hombres', 'Mujeres'],
+                ['2018', 1000, 1400],
+                ['2019', 1000, 400],
+                ['2020', 1170, 1460],
+                ['2021', 660, 1120],
+                ['2022', 1030, 540]
+            ]);
+
+            var optionsDos = {
+                title: '',
+                hAxis: { title: 'Anio', titleTextStyle: { color: '#333' } },
+                vAxis: { minValue: 0 }
+            };
+
+            var chartDos = new google.visualization.AreaChart(document.getElementById('google5'));
+            chartDos.draw(dataDos, optionsDos);
+        }
+
     </script>
 </body>
 <?php } ?>
