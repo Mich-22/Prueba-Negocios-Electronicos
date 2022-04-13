@@ -44,7 +44,7 @@ window.print();
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 
     <tr height="50">
-      <td colspan="2" class="fontkink2" style="padding-left:0px;"><div class="fontpink2"> <b>Actualizar estado de pedido !</b></div></td>
+      <td colspan="2" class="fontkink2" style="padding-left:0px;"><div class="fontpink2"></td>
       
     </tr>
     <tr height="30">
