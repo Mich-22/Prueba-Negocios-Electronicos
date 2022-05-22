@@ -348,7 +348,7 @@ $currentTime = date( 'd-m-Y h:i:s A', time () );
                   
 <?php 
                 $status='Delivered';
-                $query=mysqli_query($con,"select users.name as username,users.email as useremail,users.contactno as usercontact,users.shippingAddress as shippingaddress,users.shippingCity as shippingcity,users.shippingState as shippingstate,users.shippingPincode as shippingpincode,products.productName as productname,products.shippingCharge as shippingcharge,orders.quantity as quantity,orders.orderDate as orderdate,products.productPrice as productprice,orders.id as id  from orders join users on  orders.userId=users.id join products on products.id=orders.productId where orders.orderStatus!='$status' or orders.orderStatus is null");
+                $query=mysqli_query($con,"select users.name as username,users.email as useremail,users.contactno as usercontact,users.shippingAddress as shippingaddress,users.shippingPincode as shippingpincode,products.productName as productname,products.shippingCharge as shippingcharge,orders.quantity as quantity,orders.orderDate as orderdate,products.productPrice as productprice,orders.id as id  from orders join users on  orders.userId=users.id join products on products.id=orders.productId where orders.orderStatus!='$status' or orders.orderStatus is null");
                 $cnt=1;
                 while($row=mysqli_fetch_array($query))
                 {
@@ -357,7 +357,7 @@ $currentTime = date( 'd-m-Y h:i:s A', time () );
                       <td><p style="margin-left: 15px;"><?php echo htmlentities($cnt);?></p></td>
                       <td><?php echo htmlentities($row['username']);?></td>
 <td><?php echo htmlentities($row['useremail']);?>/<?php echo htmlentities($row['usercontact']);?></td>
-<td><?php echo htmlentities($row['shippingaddress'].",".$row['shippingcity'].",".$row['shippingstate']."-".$row['shippingpincode']);?></td>
+<td><?php echo htmlentities($row['shippingaddress'].",".$row['shippingpincode']);?></td>
                       <td><?php echo htmlentities($row['productname']);?></td>
                       <td><p style="margin-left: 45px;"><?php echo htmlentities($row['quantity']);?></p></td>
                       <td><p style="margin-left: 15px;"><?php echo htmlentities($row['quantity']*$row['productprice']+$row['shippingcharge']);?></p></td>

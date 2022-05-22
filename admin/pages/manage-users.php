@@ -328,7 +328,6 @@ if(isset($_GET['del']))
                     <th scope="col">Correo electronico</th>
                     <th scope="col">Contacto</th>
                     <th scope="col">Dirección envio</th>
-                    <th scope="col">Dirección facturación</th>
                     <th scope="col">Fecha registro</th>
                   </tr>
                 </thead>
@@ -346,8 +345,7 @@ if(isset($_GET['del']))
                       <td><?php echo htmlentities($row['name']);?></td>
                       <td><?php echo htmlentities($row['email']);?></td>
                       <td> <?php echo htmlentities($row['contactno']);?></td>
-                      <td><?php echo htmlentities($row['shippingAddress'].",".$row['shippingCity'].",".$row['shippingState']."-".$row['shippingPincode']);?></td>
-                      <td><?php echo htmlentities($row['billingAddress'].",".$row['billingCity'].",".$row['billingState']."-".$row['billingPincode']);?></td>
+                      <td><?php echo htmlentities($row['shippingAddress'].",".$row['shippingPincode']);?></td>
                       <td><?php echo htmlentities($row['regDate']);?></td>  
                     </tr>
 <?php 
